@@ -1,0 +1,20 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Privacy modes infographic">
+  <!-- transparent background to match site cards -->
+  <!-- three columns representing modes -->
+  <g transform="translate(128 160)" fill="none" stroke="#1677ff" stroke-width="14">
+    <rect x="0" y="0" width="240" height="704" rx="24"/>
+    <rect x="264" y="176" width="240" height="528" rx="24"/>
+    <rect x="528" y="352" width="240" height="352" rx="24"/>
+  </g>
+  <!-- icons inside columns -->
+  <g transform="translate(128 160)">
+    <circle cx="120" cy="96" r="40" fill="#1677ff"/>
+    <circle cx="384" cy="272" r="40" fill="#1677ff"/>
+    <circle cx="648" cy="448" r="40" fill="#1677ff"/>
+    <path d="M100 180 h40 v360 h-40z M364 356 h40 v184 h-40z M628 532 h40 v8 h-40z" fill="#1677ff" opacity="0.2"/>
+  </g>
+  <text x="248" y="970" text-anchor="middle" font-family="Inter, system-ui, -apple-system" font-size="28" fill="#1677ff">Transparent</text>
+  <text x="512" y="970" text-anchor="middle" font-family="Inter, system-ui, -apple-system" font-size="28" fill="#1677ff">Private</text>
+  <text x="776" y="970" text-anchor="middle" font-family="Inter, system-ui, -apple-system" font-size="28" fill="#1677ff">Accountable</text>
+</svg>
+

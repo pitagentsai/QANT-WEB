@@ -1,0 +1,17 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DAPOA selective disclosure infographic">
+  <!-- transparent background to match site cards -->
+  <!-- envelope + shield -->
+  <g fill="none" stroke="#1677ff" stroke-width="14">
+    <rect x="192" y="256" width="640" height="400" rx="28"/>
+    <path d="M192 256 L512 488 L832 256"/>
+    <path d="M512 520 l180 80 v120 c0 88-120 152-180 176 c-60-24-180-88-180-176 V600z" fill="#1677ff" fill-opacity="0.06"/>
+  </g>
+  <!-- ticks representing proofs -->
+  <g stroke="#1677ff" stroke-width="14">
+    <path d="M256 736 l24 24 l56-56"/>
+    <path d="M384 736 l24 24 l56-56"/>
+    <path d="M512 736 l24 24 l56-56"/>
+    <path d="M640 736 l24 24 l56-56"/>
+  </g>
+</svg>
+
