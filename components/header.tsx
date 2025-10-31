@@ -18,7 +18,7 @@ export function Header() {
           <div className="flex items-center justify-between px-6 py-4">
           <Link href="/" className="flex items-center gap-2">
             <div className="flex items-center gap-2">
-              <Image src="/logoq.png" alt="ncrypt" width={28} height={28} className="rounded" />
+              <Image src="/logoq.png" alt="ncrypt" width={40} height={40} className="rounded" />
             </div>
           </Link>
 
