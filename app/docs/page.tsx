@@ -1,6 +1,10 @@
+import { Header } from "@/components/header"
+
 export default function DocsPage() {
   return (
-    <main className="min-h-screen px-6 pt-28 pb-24">
+    <main className="min-h-screen bg-background">
+      <Header />
+      <div className="px-6 pt-28 pb-24">
       <div className="container mx-auto max-w-4xl space-y-12">
         <header className="space-y-2">
           <h1 className="text-4xl lg:text-5xl font-bold text-primary">QUANT: A Quantum-Resistant Cryptocurrency</h1>
@@ -176,6 +180,7 @@ export default function DocsPage() {
           <h2 className="text-2xl font-semibold">Conclusion</h2>
           <p className="text-foreground/90">QUANT establishes a secure, quantum-resistant, and privacy-flexible ecosystem built for the coming era of decentralized finance. By combining post-quantum cryptography with a modular privacy framework, QUANT offers both individuals and institutions a resilient foundation for secure digital value exchange.</p>
         </section>
+      </div>
       </div>
     </main>
   )

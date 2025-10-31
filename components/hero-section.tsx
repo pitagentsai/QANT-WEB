@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { ArrowUpRight } from "lucide-react"
 import Image from "next/image"
-import logo from "@/components/logoq.png"
 
 export function HeroSection() {
   return (
@@ -13,12 +12,10 @@ export function HeroSection() {
               Preserving Security for Future-Proof Blockchains
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
-              QUANT is a quantum-resistant Layer 1 with selectable privacy levels—transparent, fully private, or
-              private-with-accountability—powered by lattice cryptography, zero-knowledge proofs, and homomorphic
-              commitments.
+              A quantum-resistant Layer 1 with selectable privacy levels—transparent, private, or accountable—powered by lattice cryptography and zero-knowledge proofs.
             </p>
             <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 py-6 text-lg">
-              Go Quantum Resistance Today
+              Go Quantum
               <ArrowUpRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
@@ -89,7 +86,7 @@ export function HeroSection() {
                 </g>
               </svg>
               <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-                <Image src={logo} alt="QANT" width={96} height={96} />
+                <Image src="/logoq.png" alt="QANT" width={96} height={96} />
               </div>
             </div>
           </div>
