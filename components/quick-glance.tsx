@@ -37,18 +37,28 @@ export function QuickGlance() {
   }
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-background/90 to-transparent">
+    <section className="py-20 px-6">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <p className="text-sm text-muted-foreground mb-4">A quick overview of QUANT’s core advantages</p>
-          <h2 className="text-4xl lg:text-5xl font-bold text-primary">QANT Quick Glance</h2>
+          <p className="text-sm text-black/80 mb-4 font-medium">A quick overview of ncrypt's core advantages</p>
+          <h2 className="text-4xl lg:text-5xl font-bold text-black">NCRYPT Quick Glance</h2>
         </div>
 
         <div className="relative max-w-6xl mx-auto">
           <div className="flex items-center gap-8">
             <button
               onClick={prevSlide}
-              className="hidden lg:flex items-center justify-center w-12 h-12 rounded-full bg-black/40 border border-white/15 text-white backdrop-blur-md shadow-lg hover:bg-white/10 transition-colors"
+              className="hidden lg:flex items-center justify-center w-12 h-12 rounded-full border border-black/20 text-black shadow-lg transition-all duration-300 hover:shadow-xl"
+              style={{
+                background: 'radial-gradient(circle at center, rgba(240, 248, 255, 0.9) 0%, rgba(208, 216, 224, 0.85) 100%)',
+                backdropFilter: 'blur(8px)'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'radial-gradient(circle at center, rgba(255, 255, 255, 0.95) 0%, rgba(240, 248, 255, 0.9) 100%)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'radial-gradient(circle at center, rgba(240, 248, 255, 0.9) 0%, rgba(208, 216, 224, 0.85) 100%)';
+              }}
               aria-label="Previous slide"
             >
               <ChevronLeft className="h-6 w-6" />
@@ -58,9 +68,13 @@ export function QuickGlance() {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className={`rounded-3xl overflow-hidden border border-white/10 bg-black/40 backdrop-blur-xl shadow-xl transition-all duration-300 ${
+                  className={`rounded-3xl overflow-hidden border border-black/15 shadow-xl transition-all duration-300 ${
                     index === currentIndex ? "md:scale-105" : "md:scale-95 md:opacity-80"
                   }`}
+                  style={{
+                    background: 'radial-gradient(ellipse at top left, rgba(255, 255, 255, 0.4) 0%, transparent 60%), radial-gradient(ellipse at bottom right, rgba(112, 128, 144, 0.15) 0%, transparent 60%), linear-gradient(135deg, rgba(240, 248, 255, 0.95) 0%, rgba(208, 216, 224, 0.92) 50%, rgba(192, 208, 224, 0.9) 100%)',
+                    backdropFilter: 'blur(16px)'
+                  }}
                 >
                   <div className="aspect-square relative">
                     <Image
@@ -71,8 +85,8 @@ export function QuickGlance() {
                     />
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                    <p className="text-white/70 leading-relaxed">{feature.description}</p>
+                    <h3 className="text-xl font-bold text-black mb-3">{feature.title}</h3>
+                    <p className="text-black/90 leading-relaxed font-medium">{feature.description}</p>
                   </div>
                 </div>
               ))}
@@ -80,7 +94,17 @@ export function QuickGlance() {
 
             <button
               onClick={nextSlide}
-              className="hidden lg:flex items-center justify-center w-12 h-12 rounded-full bg-black/40 border border-white/15 text-white backdrop-blur-md shadow-lg hover:bg-white/10 transition-colors"
+              className="hidden lg:flex items-center justify-center w-12 h-12 rounded-full border border-black/20 text-black shadow-lg transition-all duration-300 hover:shadow-xl"
+              style={{
+                background: 'radial-gradient(circle at center, rgba(240, 248, 255, 0.9) 0%, rgba(208, 216, 224, 0.85) 100%)',
+                backdropFilter: 'blur(8px)'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'radial-gradient(circle at center, rgba(255, 255, 255, 0.95) 0%, rgba(240, 248, 255, 0.9) 100%)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'radial-gradient(circle at center, rgba(240, 248, 255, 0.9) 0%, rgba(208, 216, 224, 0.85) 100%)';
+              }}
               aria-label="Next slide"
             >
               <ChevronRight className="h-6 w-6" />
@@ -93,7 +117,7 @@ export function QuickGlance() {
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`w-2 h-2 rounded-full transition-all ${
-                  index === currentIndex ? "bg-primary w-8" : "bg-white/30"
+                  index === currentIndex ? "bg-primary w-8" : "bg-black/30"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />

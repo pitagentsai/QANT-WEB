@@ -4,76 +4,87 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  /* QANT Primary: matched to logo (#1677ff) */
-  --primary: #1677ff;
-  --primary-foreground: #ffffff;
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  /* Chart palette derived from logo blue */
-  --chart-1: #1677ff; /* primary */
-  --chart-2: #4090ff; /* lighter */
-  --chart-3: #0f5ed6; /* darker */
-  --chart-4: #7ab3ff; /* tint */
-  --chart-5: #0a47a3; /* shade */
+  /* Metallic gradient from grey-blue to white - more contrast */
+  --bg-gradient-start: #708090; /* slate grey-blue (steel blue) */
+  --bg-gradient-mid: #A8B8C8; /* medium grey-blue */
+  --bg-gradient-end: #F8FAFC; /* almost pure white */
+  
+  /* Light theme with dark text for contrast */
+  --background: var(--bg-gradient-start);
+  --foreground: #000000; /* black text for maximum contrast */
+  --card: rgba(255, 255, 255, 0.9);
+  --card-foreground: #000000;
+  --popover: rgba(255, 255, 255, 0.95);
+  --popover-foreground: #000000;
+  
+  /* Primary color - darker for contrast */
+  --primary: #2A3035; /* very dark blue-grey */
+  --primary-foreground: #FFFFFF;
+  
+  --secondary: rgba(0, 0, 0, 0.05);
+  --secondary-foreground: #000000;
+  --muted: rgba(0, 0, 0, 0.03);
+  --muted-foreground: #1A1F24; /* very dark for contrast */
+  --accent: rgba(42, 48, 53, 0.1);
+  --accent-foreground: #000000;
+  --destructive: #8B0000; /* darker red */
+  --destructive-foreground: #FFFFFF;
+  --border: rgba(0, 0, 0, 0.15);
+  --input: rgba(255, 255, 255, 0.95);
+  --ring: rgba(42, 48, 53, 0.4);
+  
+  /* Chart palette - dark tones for light background */
+  --chart-1: #2A3035;
+  --chart-2: #1A1F24;
+  --chart-3: #3A4045;
+  --chart-4: #252B32;
+  --chart-5: #404A50;
+  
   --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar: rgba(255, 255, 255, 0.95);
+  --sidebar-foreground: #000000;
+  --sidebar-primary: #2A3035;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: rgba(0, 0, 0, 0.05);
+  --sidebar-accent-foreground: #000000;
+  --sidebar-border: rgba(0, 0, 0, 0.1);
+  --sidebar-ring: rgba(42, 48, 53, 0.3);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: #3b8dff; /* slightly lighter for dark surfaces */
-  --primary-foreground: #0b1220; /* deep background text when used as fg */
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
-  --chart-1: #3b8dff;
-  --chart-2: #1677ff;
-  --chart-3: #7ab3ff;
-  --chart-4: #0f5ed6;
-  --chart-5: #0a47a3;
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
+  /* Use gradient background for dark theme */
+  --background: var(--bg-gradient-end);
+  --foreground: #FFFFFF;
+  --card: rgba(64, 74, 80, 0.6);
+  --card-foreground: #FFFFFF;
+  --popover: rgba(64, 74, 80, 0.95);
+  --popover-foreground: #FFFFFF;
+  --primary: #8A9AA8; /* lighter desaturated blue-grey */
+  --primary-foreground: #000000;
+  --secondary: rgba(64, 74, 80, 0.4);
+  --secondary-foreground: #FFFFFF;
+  --muted: rgba(64, 74, 80, 0.3);
+  --muted-foreground: #D0D5D8;
+  --accent: rgba(208, 213, 216, 0.2);
+  --accent-foreground: #FFFFFF;
+  --destructive: #A65A5A;
+  --destructive-foreground: #FFFFFF;
+  --border: rgba(208, 213, 216, 0.2);
+  --input: rgba(64, 74, 80, 0.5);
+  --ring: rgba(208, 213, 216, 0.4);
+  --chart-1: #8A9AA8;
+  --chart-2: #9AAAB8;
+  --chart-3: #7A8A98;
+  --chart-4: #6A7A88;
+  --chart-5: #5A6A78;
+  --sidebar: rgba(64, 74, 80, 0.8);
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #8A9AA8;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: rgba(208, 213, 216, 0.1);
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: rgba(208, 213, 216, 0.2);
+  --sidebar-ring: rgba(208, 213, 216, 0.3);
 }
 
 @theme inline {
@@ -121,11 +132,24 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background: 
+      radial-gradient(ellipse 1200px 800px at 20% 30%, rgba(255, 255, 255, 0.6) 0%, transparent 60%),
+      radial-gradient(ellipse 1000px 700px at 80% 70%, rgba(112, 128, 144, 0.4) 0%, transparent 60%),
+      radial-gradient(circle 600px at 50% 50%, rgba(200, 210, 220, 0.3) 0%, transparent 70%),
+      linear-gradient(135deg, #708090 0%, #A8B8C8 30%, #D0D8E0 60%, #F0F8FF 100%);
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    position: relative;
+  }
+  html {
+    background: linear-gradient(135deg, #708090 0%, #A8B8C8 30%, #D0D8E0 60%, #F0F8FF 100%);
+    min-height: 100vh;
   }
 }
 
-/* QANT animations */
+/* NCRYPT animations */
 @keyframes qant-orbit-rotate {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -141,6 +165,19 @@
   50% { transform: scale(1.3); opacity: 1; }
 }
 
+/* Background blob animations */
+@keyframes blob-float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(20px, -30px) scale(1.1); }
+  50% { transform: translate(-15px, 20px) scale(0.9); }
+  75% { transform: translate(30px, 15px) scale(1.05); }
+}
+
+@keyframes blob-pulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
 .qant-orbit {
   animation: qant-orbit-rotate 20s linear infinite;
   transform-origin: 300px 300px;
@@ -152,4 +189,13 @@
 
 .qant-dot {
   animation: qant-pulse 3s ease-in-out infinite;
+}
+
+/* Metallic gradient utility for components */
+.metallic-gradient {
+  background: 
+    radial-gradient(ellipse at top left, rgba(255, 255, 255, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(112, 128, 144, 0.2) 0%, transparent 50%),
+    linear-gradient(135deg, rgba(240, 248, 255, 0.95) 0%, rgba(208, 216, 224, 0.9) 50%, rgba(192, 208, 224, 0.85) 100%);
+  backdrop-filter: blur(12px);
 }

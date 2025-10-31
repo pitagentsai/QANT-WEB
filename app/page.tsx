@@ -5,7 +5,7 @@ import { ThreatSection } from "@/components/threat-section"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen">
       <Header />
       <HeroSection />
       <QuickGlance />

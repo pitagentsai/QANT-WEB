@@ -8,13 +8,13 @@ export function HeroSection() {
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
-            <h1 className="text-4xl lg:text-5xl font-bold text-primary/80 leading-tight">
+            <h1 className="text-4xl lg:text-5xl font-bold text-black leading-tight">
               Preserving Security for Future-Proof Blockchains
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
+            <p className="text-lg text-black/90 leading-relaxed max-w-xl font-medium">
               A quantum-resistant Layer 1 with selectable privacy levels—transparent, private, or accountable—powered by lattice cryptography and zero-knowledge proofs.
             </p>
-            <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 py-6 text-lg">
+            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 py-6 text-lg">
               Go Quantum
               <ArrowUpRight className="ml-2 h-5 w-5" />
             </Button>
@@ -23,11 +23,11 @@ export function HeroSection() {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-3xl opacity-30" />
             <div className="relative z-10 w-[600px] h-[600px] mx-auto">
-              <svg viewBox="0 0 600 600" className="w-full h-full text-primary" xmlns="http://www.w3.org/2000/svg">
+              <svg viewBox="0 0 600 600" className="w-full h-full text-black" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" stopColor="currentColor" stopOpacity="0.25" />
-                    <stop offset="100%" stopColor="currentColor" stopOpacity="0" />
+                    <stop offset="0%" stopColor="#000000" stopOpacity="0.15" />
+                    <stop offset="100%" stopColor="#000000" stopOpacity="0" />
                   </radialGradient>
                 </defs>
                 <circle cx="300" cy="300" r="240" fill="url(#glow)" />
@@ -55,12 +55,12 @@ export function HeroSection() {
                           cy="300"
                           r={ringRadius}
                           fill="none"
-                          stroke="currentColor"
-                          strokeWidth="1.5"
+                          stroke="#000000"
+                          strokeWidth="2"
                           strokeDasharray={`${dash} ${Math.max(gap, 3)}`}
                           className="qant-dash"
                           style={{ animationDuration: "40s" }}
-                          opacity={0.7 - ringIndex * 0.1}
+                          opacity={0.8 - ringIndex * 0.1}
                         />
                         {Array.from({ length: particleCount }).map((_, j) => {
                           // evenly spaced angles with random phase and small jitter per point
@@ -74,9 +74,9 @@ export function HeroSection() {
                               key={`dot-${ringIndex}-${j}`}
                               cx={x}
                               cy={y}
-                              r={3}
-                              fill="currentColor"
-                              opacity={0.9}
+                              r={3.5}
+                              fill="#000000"
+                              opacity={0.95}
                             />
                           )
                         })}
@@ -86,7 +86,7 @@ export function HeroSection() {
                 </g>
               </svg>
               <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-                <Image src="/logoq.png" alt="QANT" width={96} height={96} />
+                <Image src="/logoq.png" alt="ncrypt" width={96} height={96} />
               </div>
             </div>
           </div>

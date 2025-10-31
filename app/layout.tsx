@@ -2,12 +2,13 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { BackgroundBlobs } from "@/components/background-blobs"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "QANT - Quantum-Resistant Blockchain",
+  title: "NCRYPT - Quantum-Resistant Blockchain",
   description: "Quantum-Resistant and Privacy Preserving Security for Future-Proof Blockchains",
   generator: "v0.app",
   icons: {
@@ -25,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${inter.className} antialiased`}>
+        <BackgroundBlobs />
         {children}
         <Analytics />
       </body>

@@ -6,7 +6,8 @@
     "build": "next build",
     "dev": "next dev -H localhost -p 3000",
     "lint": "eslint .",
-    "start": "next start"
+    "start": "next start",
+    "generate-whitepaper": "node scripts/generate-whitepaper.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
