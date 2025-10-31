@@ -364,12 +364,98 @@ a, button {
 
 /* Scroll animations */
 @media (prefers-reduced-motion: no-preference) {
-  [data-scroll] {
+  .scroll-animate {
     opacity: 0;
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   }
 
-  [data-scroll].is-visible {
+  .scroll-animate.visible {
+    opacity: 1;
+  }
+
+  .scroll-fade-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .scroll-fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .scroll-fade-down {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .scroll-fade-down.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .scroll-fade-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .scroll-fade-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .scroll-fade-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .scroll-fade-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .scroll-scale {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .scroll-scale.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* Staggered scroll animations */
+  .scroll-stagger > * {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .scroll-stagger.visible > *:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+
+  .scroll-stagger.visible > *:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+
+  .scroll-stagger.visible > *:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+
+  .scroll-stagger.visible > *:nth-child(4) {
+    transition-delay: 0.4s;
+  }
+
+  .scroll-stagger.visible > *:nth-child(5) {
+    transition-delay: 0.5s;
+  }
+
+  .scroll-stagger.visible > * {
     opacity: 1;
     transform: translateY(0);
   }

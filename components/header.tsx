@@ -37,7 +37,7 @@ export function Header() {
 
           <div className="flex items-center gap-4">
             <Link 
-              href="https://x.com" 
+              href="https://x.com/ncryptsolquant" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center justify-center w-10 h-10 rounded-full text-black/90 hover:text-primary transition-all font-medium hover:scale-110 border border-black/20 hover:border-primary/50"
