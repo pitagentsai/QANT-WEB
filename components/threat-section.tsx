@@ -8,10 +8,10 @@ const threats = [
 
 export function ThreatSection() {
   return (
-    <section className="py-20 px-6">
+    <section className="py-20 px-6 animate-fade-in">
       <div className="container mx-auto max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
+          <div className="animate-fade-in-left animate-delay-100">
             <h2 className="text-4xl lg:text-5xl font-bold text-black mb-8">Quantum Is a Time Bomb.</h2>
             <p className="text-lg text-black/90 leading-relaxed font-medium">
               NCRYPT addresses post-quantum risk and compliance head-on with lattice cryptography, selective disclosure,
@@ -23,10 +23,12 @@ export function ThreatSection() {
             {threats.map((threat, index) => (
               <div
                 key={index}
-                className="flex items-start gap-4 rounded-2xl p-6 shadow-sm border border-black/15"
+                className="flex items-start gap-4 rounded-2xl p-6 shadow-sm border border-black/15 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 animate-fade-in-right"
                 style={{
                   background: 'radial-gradient(ellipse at top left, rgba(255, 255, 255, 0.35) 0%, transparent 60%), radial-gradient(ellipse at bottom right, rgba(112, 128, 144, 0.12) 0%, transparent 60%), linear-gradient(135deg, rgba(240, 248, 255, 0.9) 0%, rgba(208, 216, 224, 0.87) 50%, rgba(192, 208, 224, 0.85) 100%)',
-                  backdropFilter: 'blur(12px)'
+                  backdropFilter: 'blur(12px)',
+                  animationDelay: `${0.2 + index * 0.15}s`,
+                  opacity: 0
                 }}
               >
                 <div className="flex-shrink-0 w-6 h-6 rounded-full bg-red-500/15 flex items-center justify-center">
